@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author oscar
  */
 public class Domino {
-
+//Esto es una prueba de comentario
     /**
      * @param args the command line arguments
      */
