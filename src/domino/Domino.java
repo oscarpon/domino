@@ -11,14 +11,15 @@ import java.util.Scanner;
  * @author oscar
  */
 public class Domino {
-//Esto es una prueba de comentario
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
         Scanner scn = new Scanner (System.in);
-         
+        
+        int prueba; 
         Jugador [] jugadores;
         String nombre;
         int numJugadores;
