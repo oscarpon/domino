@@ -19,7 +19,6 @@ public class Domino {
         
         Scanner scn = new Scanner (System.in);
         
-        int prueba; 
         Jugador [] jugadores;
         String nombre;
         int numJugadores;
