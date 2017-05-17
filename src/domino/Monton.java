@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package domino;
-//Prueba de comentario 
+//Prueba de comentario. 
 /**
  *
  * @author oscar
