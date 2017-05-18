@@ -175,7 +175,7 @@ public class Domino {
                     }
                 }
                 System.out.println("El jugador ganador es el de puntuación : " + minima);
-                for (int k = 0; k < 10; k++) {
+                for (int k = 0; k < 3; k++) {
                      if(jugadores[0].getMano().puntuacionTotal() == jugadores[k].getMano().puntuacionTotal()){//En el caso de que dos jugadores ttengan la misma puntuación, gana la mano
                     System.out.println("El jugador ganador es: " + jugadores[0].getNombre());
                     }
@@ -238,10 +238,10 @@ public class Domino {
                                          //estén ya 8 veces, por lo que nadie va a poder insertar fichas
         if(m.consultarDerecha() == m.consultarIzquierda()){
             
-            if(m.consultarNumVecesNum(m.consultarDerecha()) == 7){
+            if(m.consultarNumVecesNum(m.consultarDerecha()) == 8){
                 return true;
             }
-        }else if(m.consultarNumVecesNum(m.consultarDerecha()) == 7 && m.consultarNumVecesNum(m.consultarIzquierda()) == 7){
+        }else if(m.consultarNumVecesNum(m.consultarDerecha()) == 8 && m.consultarNumVecesNum(m.consultarIzquierda()) == 8){
             return true;
         }
         

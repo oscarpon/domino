@@ -36,6 +36,9 @@ public class Mano {
         for(int i = pos + 1; i < getNumFichas(); i++){
             fichasJugador[i - 1] = fichasJugador[i];
         }
+        
+        //fichasJugador[pos] = fichasJugador[numFichas];
+        
         numFichas--;
        
         return f;
