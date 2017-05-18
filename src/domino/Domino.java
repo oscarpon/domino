@@ -175,7 +175,7 @@ public class Domino {
                     }
                 }
                 System.out.println("El jugador ganador es el de puntuación : " + minima);
-                for (int k = 0; k < 3; k++) {
+                for (int k = 0; k < jugadores.length; k++) {
                      if(jugadores[0].getMano().puntuacionTotal() == jugadores[k].getMano().puntuacionTotal()){//En el caso de que dos jugadores ttengan la misma puntuación, gana la mano
                     System.out.println("El jugador ganador es: " + jugadores[0].getNombre());
                     }
