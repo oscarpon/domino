@@ -18,7 +18,7 @@ public class Domino {
     public static void main(String[] args) {
         
         Scanner scn = new Scanner (System.in);
-        
+         
         Jugador [] jugadores;
         String nombre;
         int numJugadores;
@@ -163,7 +163,17 @@ public class Domino {
                 finalJuego = true;
                 
             } 
-            else if(cierre(m) == true){//en el caso de que tengamos el mismo numero en los extremos, y ese numero este repetido 8 veces. Comprobamos las 
+           
+                
+            if (i < numJugadores-1){
+                i++;
+            }
+            else{
+                i=0;
+            } 
+        }while (finalJuego != true);
+        
+             if(cierre(m) == true){//en el caso de que tengamos el mismo numero en los extremos, y ese numero este repetido 8 veces. Comprobamos las 
                                       //puntuaciones de los jugadores y guardamos la minima
                 int minima = 0;
                 int inicio = jugadores[0].getMano().puntuacionTotal();
@@ -174,25 +184,25 @@ public class Domino {
                         aux = minima;
                     }
                 }
-                System.out.println("El jugador ganador es el de puntuación : " + minima);
                 for (int k = 0; k < jugadores.length; k++) {
-                     if(jugadores[0].getMano().puntuacionTotal() == jugadores[k].getMano().puntuacionTotal()){//En el caso de que dos jugadores ttengan la misma puntuación, gana la mano
+                    if(jugadores[0].getMano().puntuacionTotal() == jugadores[k].getMano().puntuacionTotal() && jugadores[0].getMano().puntuacionTotal() == minima ){//En el caso de que dos jugadores ttengan la misma puntuación, gana la mano
                     System.out.println("El jugador ganador es: " + jugadores[0].getNombre());
+                    }else{
+                        for (int l= 0; l < jugadores.length; l++){
+                            if (jugadores[l].getMano().puntuacionTotal() == minima ){
+                                System.out.println ("El jugador ganador es: " + jugadores[l].getNombre());
+                            }else {
+                                System.out.println ("Dos jugadores tienen la misma puntuación.EMPATE");
+                            }
+                        }
                     }
-                }
-               
+                          
+                  
             }
-                
-            if (i < numJugadores-1){
-                i++;
-            }
-            else{
-                i=0;
-            }   
-            
-        }while (finalJuego != true ); 
+        }
         
     }
+    
     
     
     

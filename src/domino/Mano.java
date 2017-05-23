@@ -31,18 +31,14 @@ public class Mano {
     //Saca una ficha de la mano y la elimina
     public Ficha sacarFicha (int pos){
         
-        Ficha f = fichasJugador[pos];
-       
-        for(int i = pos + 1; i < getNumFichas(); i++){
-            fichasJugador[i - 1] = fichasJugador[i];
-        }
-        
-        //fichasJugador[pos] = fichasJugador[numFichas];
+        Ficha j = fichasJugador[numFichas - 1];
+        fichasJugador [numFichas-1]= fichasJugador[pos];
+        fichasJugador[pos]= j;
         
         numFichas--;
        
-        return f;
-             
+        return fichasJugador[pos];
+      
     }
     
    //Visualiza la ficha, pero no la elimina de la mano
