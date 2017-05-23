@@ -98,7 +98,7 @@ public class Domino {
                         if(cierre(m) == true){//Comprueba si la condición de cierre es true, para que así el juego no se siga ejecuntando
                             finalJuego = true;
                         }
-                        if(m.consultarIzquierda() == 0 && f.getNUM_IZQUIERDA() == 0){//Para evitar algunos problemas en la ejecución, la opción de darle la vuelta a una ficha con 0, ha sido tratada de una forma especial
+                        if(m.consultarIzquierda() == f.getNUM_IZQUIERDA()){//Para evitar algunos problemas en la ejecución, la opción de darle la vuelta a una ficha con 0, ha sido tratada de una forma especial
                             f.darVueltaFicha();//Le damos siempre la vuelta, ya que el 0 siempre esta a la izquierda
                             m.insertarFicha(f, 1);//Automatcamente la inserta a la izquierda de la mesa(1)
                         }

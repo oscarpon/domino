@@ -31,13 +31,13 @@ public class Mano {
     //Saca una ficha de la mano y la elimina
     public Ficha sacarFicha (int pos){
         
-        Ficha j = fichasJugador[numFichas - 1];
-        fichasJugador [numFichas-1]= fichasJugador[pos];
-        fichasJugador[pos]= j;
+        Ficha j = fichasJugador[pos];
+        fichasJugador [pos]= fichasJugador[numFichas-1];
+        fichasJugador[numFichas-1]= j;
         
         numFichas--;
        
-        return fichasJugador[pos];
+        return j;
       
     }
     
